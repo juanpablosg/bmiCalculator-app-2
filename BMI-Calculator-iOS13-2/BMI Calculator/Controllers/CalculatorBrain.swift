@@ -37,3 +37,4 @@ struct CalculatorBrain {
         return bmi?.color ?? .white
     }
 }
+
