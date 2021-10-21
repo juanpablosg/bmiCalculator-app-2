@@ -1,10 +1,4 @@
-//
-//  ResultViewController.swift
-//  BMI Calculator
-//
-//  Created by Juan Pablo Sanchez Gonzalez on 30/09/21.
-//  Copyright © 2021 Angela Yu. All rights reserved.
-//
+
 
 import UIKit
 
