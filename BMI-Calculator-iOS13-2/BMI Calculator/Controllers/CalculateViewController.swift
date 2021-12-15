@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController {
+final class CalculateViewController: UIViewController {
     
-    var calculatorBrain = CalculatorBrain()
-    var bmiValue = "0.0"
+    private var calculatorBrain = CalculatorBrain()
+    private var bmiValue = "0.0"
     
-    @IBOutlet weak var metersLabel: UILabel!
-    @IBOutlet weak var kilogramsLabel: UILabel!
-    @IBOutlet weak var heightSlider: UISlider!
-    @IBOutlet weak var weightSlider: UISlider!
+    @IBOutlet private weak var metersLabel: UILabel!
+    @IBOutlet private weak var kilogramsLabel: UILabel!
+    @IBOutlet private weak var heightSlider: UISlider!
+    @IBOutlet private weak var weightSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +24,19 @@ class CalculateViewController: UIViewController {
         weightSlider.value = 100
     }
 
-    @IBAction func heightSliderChanged(_ sender: UISlider) {
+    @IBAction private func heightSliderChanged(_ sender: UISlider) {
         let height = String(format: "%.2f", sender.value )
         metersLabel.text = "\(height)m"
     }
 
     
-    @IBAction func weightSliderChanged(_ sender: UISlider) {
+    @IBAction private func weightSliderChanged(_ sender: UISlider) {
         let weight = String(format: "%.0f", sender.value )
         kilogramsLabel.text = "\(weight)kg"
     }
     
 
-    @IBAction func calculatePressedButton(_ sender: UIButton) {
+    @IBAction private func calculatePressedButton(_ sender: UIButton) {
         
         calculatorBrain.calculateBmi(height: heightSlider.value, weight: weightSlider.value)
         
